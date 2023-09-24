@@ -1,6 +1,8 @@
 
 .file-upload-container {
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .file-input {
@@ -18,6 +20,7 @@
 }
 .upload-button {
     margin-top: 10px;
+    width: max-content;
 }
 .alert-message {
     margin-top: 10px;
