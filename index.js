@@ -1,17 +1,17 @@
 import express from "express";
 import bodyParser from "body-parser";
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-const __dirname = dirname(fileURLToPath(import.meta.url));
-import uploadRoute from "./routes/upload";
+import cors from 'cors';
 
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: 'https://localhost:3000',
+  origin: 'http://localhost:3000',
 }));
+
 app.use(bodyParser.urlencoded({extended: true}));
-app.use('/api/upload', uploadRoute);
+
+import uploadRoute from './routes/upload.js';
+app.use('/api', uploadRoute);
 
 
 app.use((err, req, res, next) => {
