@@ -50,12 +50,12 @@ This comprehensive text analysis tool takes an input text file, skillfully compu
    ```shell
    npm start
    
-This will start the application, and you can access it in your web browser at http://localhost:3000.
+   This will start the application, and you can access it in your web browser at http://localhost:3000.
 
 7. Upload a Text File:
 
-  Click the "Choose File" button to select a text file (.txt) for analysis.
-  Click the "Upload" button to analyze the selected file.
+   Click the "Choose File" button to select a text file (.txt) for analysis.
+   Click the "Upload" button to analyze the selected file.
 
   
 Example
@@ -69,11 +69,13 @@ The tool will process the file and display the results, including word frequenci
   **Alert is displayed if the file size exceeds the limit of 5MB or if the file is empty.**
   
   <img width="960" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/15cbc04c-bbed-450f-ab5b-608dd4bd488c">
+  
   <img width="960" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/650e50a3-12fd-4e54-9b10-8f71d2b46560">
 
   **When a file of size less than 5MB is uploaded, you can view the results.**
-  **View Results:**
   
+  **View Results:**
+   
   <img width="960" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/1db40619-ff56-40ed-b604-826bb241ffa0">
 
    **Search Functionality**
@@ -83,9 +85,11 @@ The tool will process the file and display the results, including word frequenci
    **Word Frequency Table with search functionality and words sorted in descending order according to their frequency**
    
    <img width="955" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/3f009261-7644-43f1-9f12-13ec71029d88">
+   
    <img width="945" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/e3f863ab-3028-4bec-8fa5-9e8f8d32f20e">
 
-The application will display the top 5 co-occurring words and the top 5 occurring words from the uploaded text. It will also display a word frequency table with a filter option to search words, in a separate tab.
+
+   The application will display the top 5 co-occurring words and the top 5 occurring words from the uploaded text. It will also display a word frequency table with a          filter option to search words, in a separate tab.
 
 
 **Acknowledgments**
