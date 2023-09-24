@@ -3,7 +3,7 @@ This comprehensive text analysis tool takes an input text file, skillfully compu
 
 ## Key Features
 
-- **Efficient Word Frequency Calculation**: Utilizes an efficient hashing algorithm to calculate word frequencies from the uploaded text, ensuring quick and accurate results.
+- **Efficient Word Frequency Calculation**: Utilizes an efficient hashing algorithm to calculate word frequencies from the uploaded text, ensuring quick and accurate results. The time complexity of hashing is typically O(1) for average-case operations, making it highly efficient for this task.
 
 - **File Size Limit Check**: Includes a file size limit check to ensure that text files larger than 5 MB are not uploaded, enhancing the user experience and preventing server overload.
 
@@ -62,7 +62,7 @@ Example
 Here's an example of how to use the Text Analyzer:
 
 Upload a text file containing text content.
-The tool will process the file and display the results, including word frequencies and the top 5 co-occurring and occurring words.
+After you upload a file, the tool will analyze it and present you with a range of results. These outcomes will comprise the frequency of each word in the text, together with the top 5 words that frequently occur in close proximity. Furthermore, there will be a separate tab that displays a table of all the word frequencies, which has a filter option to search for particular words.
 
   <img width="958" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/45cb8b18-160e-4066-b781-dcce2dbf8419">
 
@@ -89,7 +89,6 @@ The tool will process the file and display the results, including word frequenci
    <img width="945" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/e3f863ab-3028-4bec-8fa5-9e8f8d32f20e">
 
 
-   The application will display the top 5 co-occurring words and the top 5 occurring words from the uploaded text. It will also display a word frequency table with a          filter option to search words, in a separate tab.
 
 
 **Acknowledgments**
