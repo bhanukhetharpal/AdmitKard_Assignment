@@ -5,7 +5,7 @@ import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
 import AnalysisResults from "./AnalysisResults";
 
-export function FileUpload() {
+export function FileUpload({onAnalysisDone}) {
   const [file, setFile] = useState(null);
   const [alert, showAlert] = useState(false);
   const [showResults, setShowResults] = useState(false);
@@ -43,6 +43,7 @@ export function FileUpload() {
           } else {
             setAnalysisData(data);
             setShowResults(true);
+            onAnalysisDone(data.wordFrequencies);
           }
         } else {
           console.error("Server error:", response.statusText);
@@ -54,19 +55,23 @@ export function FileUpload() {
   };
   return (
     <div>
-      <InputGroup className="mb-3">
-        <Form.Control
-          placeholder="Choose File"
-          aria-label="Choose File"
-          aria-describedby="File Upload"
-          type="file"
-          accept=".txt"
-          onChange={handleFileChange}
-        />
-      </InputGroup>
-      <Button variant="primary" onClick={handleUpload}>
-        Upload
-      </Button>
+      {!showResults && (
+        <div>
+          <InputGroup className="mb-3">
+            <Form.Control
+              placeholder="Choose File"
+              aria-label="Choose File"
+              aria-describedby="File Upload"
+              type="file"
+              accept=".txt"
+              onChange={handleFileChange}
+            />
+          </InputGroup>
+          <Button variant="primary" onClick={handleUpload}>
+            Upload
+          </Button>
+        </div>
+      )}
       {alert && (
         <Alert variant="primary" onClose={() => showAlert(false)} dismissible>
           File size exceeds the limit of 5MB. Please select a smaller file, or

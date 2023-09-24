@@ -25,7 +25,7 @@ function performAnalysis(text) {
     };
   }
   //Finding the 5 mostly occuring words
-  const top5words = Object.keys(wordCounts)
+  const top5Words = Object.keys(wordCounts)
     .sort((a, b) => wordCounts[b] - wordCounts[a])
     .slice(0, 5);
 
@@ -48,7 +48,7 @@ function performAnalysis(text) {
 
   return {
     wordFrequencies: wordCounts,
-    top5words,
+    top5Words,
     top5Pairs,
   };
 }
