@@ -6,28 +6,50 @@ const router = express.Router();
 const upload = multer({ dest: "uploads/" });
 
 function analyzeText(text) {
-    const wordRegex = /[a-zA-Z]+/g;
+  const wordRegex = /[a-zA-Z]+/g;
 
-    //tokenizing the text and counting word frquencies
-    const wordCounts = {};
-    const tokens = text.match(wordRegex);
+  //tokenizing the text and counting word frquencies
+  const wordCounts = {};
+  const tokens = text.match(wordRegex);
 
-    if(tokens) {
-        for(const token of tokens) {
-            const word = token.toLowerCase();
-            if(wordCounts[word]){
-                wordCounts[word]++;
-            }
-            else{
-                wordCounts[word] = 1;
-            }
-        }
+  if (tokens) {
+    for (const token of tokens) {
+      const word = token.toLowerCase();
+      if (wordCounts[word]) {
+        wordCounts[word]++;
+      } else {
+        wordCounts[word] = 1;
+      }
     }
+  }
 
-    //Finding the 5 mostly occuring words
-     
+  //Finding the 5 mostly occuring words
+  const top5words = Object.keys(wordCounts)
+    .sort((a, b) => wordCounts[b] - wordCounts[a])
+    .slice(0, 5);
 
-    
+  //Finding top 5 mostly co-occuring words
+  const wordPairs = {};
+  if (tokens) {
+    for (let i = 0; i < tokens.length() - 1; i++) {
+      const pair = `${tokens[i].toLowerCase()} ${tokens[i + 1].toLowerCase()}`;
+      if (wordPairs[pair]) {
+        wordPairs[pair]++;
+      } else {
+        wordPairs[pair] = 1;
+      }
+    }
+  }
+
+  const top5Pairs = Object.keys(wordPairs)
+    .sort((a, b) => wordPairs[b] - wordPairs[a])
+    .slice(0, 5);
+
+  return {
+    wordFrequencies: wordCounts,
+    top5words,
+    top5Pairs,
+  };
 }
 
 router.post("/upload", upload.single("file"), (req, res) => {
