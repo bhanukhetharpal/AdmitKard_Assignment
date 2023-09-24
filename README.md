@@ -13,6 +13,8 @@ This comprehensive text analysis tool takes an input text file, skillfully compu
 
 - **Search Functionality**: Offers a built-in search functionality that allows users to filter and find specific words within the displayed results, making it easy to locate relevant information.
 
+- **Interactive Frequency Graph**: The tool has a frequency graph that shows word distribution in uploaded text. The `react-chartjs-2` library makes it easy to analyze and compare word frequencies, leading to a deeper understanding of the data.
+
 ## Usage
 
 1. **Clone the Repository:**
@@ -68,28 +70,31 @@ After you upload a file, the tool will analyze it and present you with a range o
 
   **Alert is displayed if the file size exceeds the limit of 5MB or if the file is empty.**
   
-  <img width="960" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/15cbc04c-bbed-450f-ab5b-608dd4bd488c">
+  <img width="960" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/41675213-e409-43d1-866a-f7fd970695ae">
   
-  <img width="960" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/650e50a3-12fd-4e54-9b10-8f71d2b46560">
+  <img width="959" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/35e7a5d5-7557-4eaa-b84e-c59743c5a38c">
+
 
   **When a file of size less than 5MB is uploaded, you can view the results.**
   
   **View Results:**
    
-  <img width="960" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/1db40619-ff56-40ed-b604-826bb241ffa0">
+  <img width="960" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/59241d56-553e-4845-86e8-7745b525df99">
 
    **Search Functionality**
    
-   <img width="959" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/723cc215-c1e0-4f5e-86e8-24f2bda9ed83">
+   <img width="960" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/20ed8529-5d04-40d7-887e-2286b3d50b4f">
 
    **Word Frequency Table with search functionality and words sorted in descending order according to their frequency**
    
-   <img width="955" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/3f009261-7644-43f1-9f12-13ec71029d88">
+   <img width="959" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/3d19e030-726e-473b-9d89-66bb596ea36a">
    
-   <img width="945" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/e3f863ab-3028-4bec-8fa5-9e8f8d32f20e">
+   <img width="959" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/8ca2febd-f57e-4967-bf96-adcc9319bac7">
+
+   **Frequency Graph**
 
 
-
+   <img width="713" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/b937d4c0-3b31-4b28-a993-26997363541d">
 
 **Acknowledgments**
 
