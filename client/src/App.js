@@ -4,6 +4,7 @@ import Tabs from "react-bootstrap/Tabs";
 import { FileUpload } from "./components/FileUpload";
 import { useState, useEffect } from "react";
 import WordFrequency from "./components/WordFrequency";
+import FrequencyGraph from "./components/FrequencyGraph";
 
 function App() {
   const [key, setKey] = useState("fileUpload");
@@ -34,6 +35,9 @@ function App() {
       </Tab>
       <Tab eventKey="freq" title="Word Frequency" disabled={!isAnalysisDone}>
         {isAnalysisDone && <WordFrequency wordFrequencies={wordFrequencies} />}
+      </Tab>
+      <Tab eventKey="freqGraph" title="Frequency Graph" disabled={!isAnalysisDone}>
+        {isAnalysisDone && <FrequencyGraph wordFrequencies={wordFrequencies} />}
       </Tab>
     </Tabs>
   );
