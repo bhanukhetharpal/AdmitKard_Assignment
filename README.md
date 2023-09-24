@@ -18,7 +18,7 @@ This comprehensive text analysis tool takes an input text file, skillfully compu
 1. **Clone the Repository:**
 
    ```shell
-   git clone https://github.com/yourusername/text-analyzer.git
+   https://github.com/bhanukhetharpal/AdmitKard_Assignment.git
    
 2. Install Dependencies:
    Navigate to the project directory and install any necessary dependencies:
