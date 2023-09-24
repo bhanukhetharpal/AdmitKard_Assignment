@@ -18,7 +18,7 @@ This comprehensive text analysis tool takes an input text file, skillfully compu
 1. **Clone the Repository:**
 
    ```shell
-   git clone https://github.com/yourusername/text-analyzer.git
+   https://github.com/bhanukhetharpal/AdmitKard_Assignment.git
    
 2. Install Dependencies:
    Navigate to the project directory and install any necessary dependencies:
@@ -66,17 +66,22 @@ The tool will process the file and display the results, including word frequenci
 
   <img width="958" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/45cb8b18-160e-4066-b781-dcce2dbf8419">
 
-  **Alert is displayed if the file size exceeds the limit of 5MB.**
+  **Alert is displayed if the file size exceeds the limit of 5MB or if the file is empty.**
+  
   <img width="960" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/15cbc04c-bbed-450f-ab5b-608dd4bd488c">
-   
+  <img width="960" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/650e50a3-12fd-4e54-9b10-8f71d2b46560">
+
   **When a file of size less than 5MB is uploaded, you can view the results.**
   **View Results:**
+  
   <img width="960" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/1db40619-ff56-40ed-b604-826bb241ffa0">
 
    **Search Functionality**
+   
    <img width="959" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/723cc215-c1e0-4f5e-86e8-24f2bda9ed83">
 
    **Word Frequency Table with search functionality and words sorted in descending order according to their frequency**
+   
    <img width="955" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/3f009261-7644-43f1-9f12-13ec71029d88">
    <img width="945" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/e3f863ab-3028-4bec-8fa5-9e8f8d32f20e">
 
