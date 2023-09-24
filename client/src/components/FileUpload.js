@@ -44,6 +44,8 @@ export function FileUpload({ onAnalysisDone }) {
         if (response.ok) {
           const data = await response.json();
           if (data.error) {
+            setAlertText(data.error);
+            showAlert(true);
             console.error(data.error);
           } else {
             setAnalysisData(data);
