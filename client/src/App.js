@@ -35,9 +35,6 @@ function App() {
       <Tab eventKey="freq" title="Word Frequency" disabled={!isAnalysisDone}>
         {isAnalysisDone && <WordFrequency wordFrequencies={wordFrequencies} />}
       </Tab>
-      <Tab eventKey="chart" title="Frequency Graph" disabled={!isAnalysisDone}>
-        Graph for frequency of each word
-      </Tab>
     </Tabs>
   );
 }

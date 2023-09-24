@@ -33,7 +33,7 @@ function WordFrequency({ wordFrequencies }) {
       {filteredWordFrequencies.length === 0 ? (
         <p>No matching word frequencies found</p>
       ) : (
-        <Table striped bordered hover>
+        <Table striped bordered hover responsive >
           <thead>
             <tr>
               <th>Word</th>
