@@ -66,7 +66,8 @@ Here's an example of how to use the Text Analyzer:
 Upload a text file containing text content.
 After you upload a file, the tool will analyze it and present you with a range of results. These outcomes will comprise the frequency of each word in the text, together with the top 5 words that frequently occur in close proximity. Furthermore, there will be a separate tab that displays a table of all the word frequencies, which has a filter option to search for particular words.
 
-  <img width="958" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/45cb8b18-160e-4066-b781-dcce2dbf8419">
+  <img width="960" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/26d99b0c-1b55-4d23-a436-308272082abd">
+
 
   **Alert is displayed if the file size exceeds the limit of 5MB or if the file is empty.**
   
