@@ -14,10 +14,10 @@ function AnalysisResults({ analysisData }) {
 
   // Filter top words and pairs based on the searchKeyword
   const filteredTopWords = top5Words.filter((word) =>
-    word.includes(searchKeyword)
+    word.includes(searchKeyword.toLowerCase())
   );
   const filteredTopPairs = top5Pairs.filter((pair) =>
-    pair.includes(searchKeyword)
+    pair.includes(searchKeyword.toLowerCase())
   );
 
   return (
