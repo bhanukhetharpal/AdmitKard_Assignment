@@ -9,6 +9,8 @@ This comprehensive text analysis tool takes an input text file, skillfully compu
 
 - **Null Checks**: Implements robust null checks throughout the application to handle scenarios where no file is uploaded, resulting in a seamless and error-free user experience.
 
+- **Responsive Design**: The application is built using React Bootstrap, providing a responsive and mobile-friendly user interface, ensuring a consistent experience across different devices.
+
 - **Search Functionality**: Offers a built-in search functionality that allows users to filter and find specific words within the displayed results, making it easy to locate relevant information.
 
 ## Usage
@@ -54,6 +56,14 @@ This will start the application, and you can access it in your web browser at ht
 
   Click the "Choose File" button to select a text file (.txt) for analysis.
   Click the "Upload" button to analyze the selected file.
+
+  
+Example
+Here's an example of how to use the Text Analyzer:
+
+Upload a text file containing text content.
+The tool will process the file and display the results, including word frequencies and the top 5 co-occurring and occurring words.
+
   <img width="958" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/45cb8b18-160e-4066-b781-dcce2dbf8419">
 
   **Alert is displayed if the file size exceeds the limit of 5MB.**
@@ -72,16 +82,12 @@ This will start the application, and you can access it in your web browser at ht
 
 The application will display the top 5 co-occurring words and the top 5 occurring words from the uploaded text. It will also display a word frequency table with a filter option to search words, in a separate tab.
 
-Example
-Here's an example of how to use the Text Analyzer:
 
-Upload a text file containing text content.
-The tool will process the file and display the results, including word frequencies and the top 5 co-occurring and occurring words.
+**Acknowledgments**
 
-
-Acknowledgments
-This project uses React for the front-end interface.
-It is built with Node.js for the back-end functionality.
-Bootstrap and React-Bootstrap are used for the user interface components. Due to limited time, we have maintained a straightforward user interface.
+- This project uses React for the front-end interface.
+- It is built with Node.js for the back-end functionality.
+- Bootstrap and React-Bootstrap are used for the user interface components. 
+- Due to limited time, a straightforward user interface is maintained.
 
 
