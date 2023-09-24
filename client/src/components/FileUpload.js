@@ -9,6 +9,7 @@ export function FileUpload() {
   const [file, setFile] = useState(null);
   const [alert, showAlert] = useState(false);
   const [showResults, setShowResults] = useState(false);
+  const [analysisData, setAnalysisData] = useState(null);
 
   const handleFileChange = (e) => {
     const selectedFile = e.target.files[0];
@@ -26,25 +27,29 @@ export function FileUpload() {
   const handleUpload = async () => {
     //file sent to backend from here after it is verified that the size is less than 5 MB
     if (file) {
-        const formData = new FormData();
-        formData.append("file", file);
-        try{
-            //sending POST request to server's upload endpoint
-            const response = await fetch("http://localhost:5000/api/upload", {
-                method: "POST",
-                body: formData,
-            });
+      const formData = new FormData();
+      formData.append("file", file);
+      try {
+        //sending POST request to server's upload endpoint
+        const response = await fetch("http://localhost:5000/api/upload", {
+          method: "POST",
+          body: formData,
+        });
 
-            if(response.ok) {
-                setShowResults(true);
-            }
-            else {
-                console.error("Server error:" , response.statusText);
-            }
+        if (response.ok) {
+          const data = await response.json();
+          if (data.error) {
+            console.error(data.error);
+          } else {
+            setAnalysisData(data);
+            setShowResults(true);
+          }
+        } else {
+          console.error("Server error:", response.statusText);
         }
-        catch (error) {
-            console.error("Error: ", error);
-        }
+      } catch (error) {
+        console.error("Error: ", error);
+      }
     }
   };
   return (
@@ -68,7 +73,7 @@ export function FileUpload() {
           compress it before uploading.
         </Alert>
       )}
-      {showResults && <AnalysisResults />}
+      {showResults && <AnalysisResults analysisData={analysisData} />}
     </div>
   );
 }

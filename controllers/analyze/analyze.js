@@ -1,7 +1,7 @@
 import fs from "fs";
 import util from "util";
 
-function analyzeTextLogic(text) {
+function performAnalysis(text) {
   const wordRegex = /[a-zA-Z]+/g;
 
   //tokenizing the text and counting word frquencies
@@ -18,7 +18,12 @@ function analyzeTextLogic(text) {
       }
     }
   }
-
+  if (Object.keys(wordCounts).length === 0) {
+    return {
+      error:
+        "No words were found in the uploaded text. Please upload a text document with words.",
+    };
+  }
   //Finding the 5 mostly occuring words
   const top5words = Object.keys(wordCounts)
     .sort((a, b) => wordCounts[b] - wordCounts[a])
@@ -27,7 +32,7 @@ function analyzeTextLogic(text) {
   //Finding top 5 mostly co-occuring words
   const wordPairs = {};
   if (tokens) {
-    for (let i = 0; i < tokens.length() - 1; i++) {
+    for (let i = 0; i < tokens.length - 1; i++) {
       const pair = `${tokens[i].toLowerCase()} ${tokens[i + 1].toLowerCase()}`;
       if (wordPairs[pair]) {
         wordPairs[pair]++;
@@ -53,8 +58,12 @@ const readFileAsync = util.promisify(fs.readFile);
 async function analyzeText(filePath) {
   try {
     const data = await readFileAsync(filePath, "utf-8");
-
-    const analysisResults = analyzeTextLogic(data);
+    if (data.trim() === "") {
+      return {
+        error: "The uploaded file is empty. Please select a file with content.",
+      };
+    }
+    const analysisResults = performAnalysis(data);
     return analysisResults;
   } catch (error) {
     console.log(error);

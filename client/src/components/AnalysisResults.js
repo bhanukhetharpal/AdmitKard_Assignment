@@ -1,13 +1,15 @@
-import React from 'react';
+import React from "react";
 
-function AnalysisResults({ topWords, topPairs }) {
-  // Display the top words and co-occurred pairs as cards
-  // Implement keyword search functionality
-  return (
-    <div>
-      {<h1>Analysing....</h1>}
-    </div>
-  );
+function AnalysisResults({ analysisData }) {
+  if (!analysisData) {
+    return null;
+  }
+  const { top5words, top5Pairs = [], wordFrequencies = [] } = analysisData;
+  console.log("Top 5 Words:", top5words);
+  console.log("Top 5 Pairs:", top5Pairs);
+  console.log("Word Frequencies:", wordFrequencies);
+
+  return <div>{<h1>Analysing....</h1>}</div>;
 }
 
 export default AnalysisResults;
