@@ -52,6 +52,7 @@ This comprehensive text analysis tool takes an input text file, skillfully compu
    ```shell
    npm start
    
+
    This will start the application, and you can access it in your web browser at http://localhost:3000.
 
 7. Upload a Text File:
@@ -94,8 +95,7 @@ After you upload a file, the tool will analyze it and present you with a range o
 
    **Frequency Graph**
 
-
-   <img width="713" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/b937d4c0-3b31-4b28-a993-26997363541d">
+   <img width="727" alt="image" src="https://github.com/bhanukhetharpal/AdmitKard_Assignment/assets/79537130/5af0aec7-e557-466c-86e9-3c26db542ccb">
 
 **Acknowledgments**
 
