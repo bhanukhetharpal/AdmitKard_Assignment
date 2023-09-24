@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import Table from "react-bootstrap/Table";
+import "../styles/wordFrequency.css";
 
 function WordFrequency({ wordFrequencies }) {
   const [searchKeyword, setSearchKeyword] = useState("");
@@ -12,7 +13,7 @@ function WordFrequency({ wordFrequencies }) {
         word.toLowerCase().includes(searchKeyword.toLowerCase())
       )
     : [];
-
+  filteredWordFrequencies.sort((a, b) => b[1] - a[1]);
   return (
     <div>
       <h2>Word Frequencies</h2>
@@ -31,9 +32,11 @@ function WordFrequency({ wordFrequencies }) {
 
       {/* Display word frequencies */}
       {filteredWordFrequencies.length === 0 ? (
-        <p>No matching word frequencies found</p>
+        <p className="no-matching-message">
+          No matching word frequencies found
+        </p>
       ) : (
-        <Table striped bordered hover responsive >
+        <Table striped bordered hover responsive className="table-primary">
           <thead>
             <tr>
               <th>Word</th>

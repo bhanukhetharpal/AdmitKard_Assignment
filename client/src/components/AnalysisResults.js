@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Card from "react-bootstrap/Card";
 import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
+import "../styles/analysisResults.css"
 
 function AnalysisResults({ analysisData }) {
   const [searchKeyword, setSearchKeyword] = useState("");
@@ -20,8 +21,8 @@ function AnalysisResults({ analysisData }) {
   );
 
   return (
-    <div>
-      <h1>Text Analysis Results</h1>
+    <div className="analysis-results-container">
+      <h1  className="analysis-heading">Text Analysis Results</h1>
       
       {/* Keyword search input */}
       <InputGroup className="mb-3">
@@ -35,14 +36,14 @@ function AnalysisResults({ analysisData }) {
 
       {/* Display top words */}
       <div>
-        <h2>Top 5 Mostly Occurring Words</h2>
+        <h2 className="analysis-heading">Top 5 Occurring Words</h2>
         {filteredTopWords.length === 0 ? (
           <p>No matching top words found</p>
         ) : (
           <div className="cards">
             {filteredTopWords.map((word, index) => (
               <Card
-                bg="info"
+                bg="primary"
                 key={index}
                 className="mb-2"
                 style={{ width: "18rem" }}
@@ -57,14 +58,14 @@ function AnalysisResults({ analysisData }) {
 
       {/* Display top 5 co-occurring words */}
       <div>
-        <h2>Top 5 Mostly Occurring Pairs</h2>
+        <h2 className="analysis-heading">Top 5 Occurring Pairs</h2>
         {filteredTopPairs.length === 0 ? (
           <p>No matching top pairs found</p>
         ) : (
           <div className="cards">
             {filteredTopPairs.map((word, index) => (
               <Card
-                bg="info"
+                bg="primary"
                 key={index}
                 className="mb-2"
                 style={{ width: "18rem" }}

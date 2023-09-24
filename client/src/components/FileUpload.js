@@ -4,11 +4,13 @@ import Alert from "react-bootstrap/Alert";
 import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
 import AnalysisResults from "./AnalysisResults";
+import "../styles/fileupload.css";
 
-export function FileUpload({onAnalysisDone}) {
+export function FileUpload({ onAnalysisDone }) {
   const [file, setFile] = useState(null);
   const [alert, showAlert] = useState(false);
   const [showResults, setShowResults] = useState(false);
+  const [alertText, setAlertText] = useState("");
   const [analysisData, setAnalysisData] = useState(null);
 
   const handleFileChange = (e) => {
@@ -17,6 +19,9 @@ export function FileUpload({onAnalysisDone}) {
       const fileSizeInBytes = selectedFile.size;
       const maxSizeInBytes = 5 * 1024 * 1024; //5MB in bytes
       if (fileSizeInBytes > maxSizeInBytes) {
+        setAlertText(
+          "File size exceeds the limit of 5MB. Please select a smaller file, or compress it before uploading"
+        );
         showAlert(true);
         return;
       }
@@ -46,6 +51,8 @@ export function FileUpload({onAnalysisDone}) {
             onAnalysisDone(data.wordFrequencies);
           }
         } else {
+          setAlertText("Kindly Upload a File to Analyse");
+          showAlert(true);
           console.error("Server error:", response.statusText);
         }
       } catch (error) {
@@ -56,9 +63,10 @@ export function FileUpload({onAnalysisDone}) {
   return (
     <div>
       {!showResults && (
-        <div>
+        <div className="file-upload-container">
           <InputGroup className="mb-3">
             <Form.Control
+              className="file-input"
               placeholder="Choose File"
               aria-label="Choose File"
               aria-describedby="File Upload"
@@ -67,15 +75,23 @@ export function FileUpload({onAnalysisDone}) {
               onChange={handleFileChange}
             />
           </InputGroup>
-          <Button variant="primary" onClick={handleUpload}>
+          <Button
+            className="upload-button"
+            variant="primary"
+            onClick={handleUpload}
+          >
             Upload
           </Button>
         </div>
       )}
       {alert && (
-        <Alert variant="primary" onClose={() => showAlert(false)} dismissible>
-          File size exceeds the limit of 5MB. Please select a smaller file, or
-          compress it before uploading.
+        <Alert
+          className="alert-message"
+          variant="primary"
+          onClose={() => showAlert(false)}
+          dismissible
+        >
+          {alertText}
         </Alert>
       )}
       {showResults && <AnalysisResults analysisData={analysisData} />}

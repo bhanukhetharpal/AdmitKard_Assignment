@@ -1,0 +1,29 @@
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.no-matching-message {
+  font-style: italic;
+  color: #888;
+}
+
+.table-primary thead th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.table-primary tbody tr:hover {
+  background-color: #cce5ff;
+}
+
+.table-primary tbody td {
+  background-color: #f8f9fa;
+  color: #333;
+  border-color: #dee2e6;
+}
